@@ -1,0 +1,69 @@
+
+:host {
+    display: block;
+    border: 1px solid rgb(228, 219, 219);
+  }
+
+ /*We using Ckeditor class style to display the statement of post like we designed it the first time */
+  :host ::ng-deep .image_resized {
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+:host ::ng-deep img {
+    width: 100%;
+}
+/* ckeditor5-image/theme/imageresize.css */
+:host ::ng-deep .image_resized img {
+    width: 100%;
+}
+/* ckeditor5-image/theme/imageresize.css */
+:host ::ng-deep .image_resized > figcaption {
+    display: block;
+}
+/* ckeditor5-image/theme/imagestyle.css */
+:host ::ng-deep .image-style-side {
+    float: right;
+    margin-left: var(--ck-image-style-spacing);
+    max-width: 50%;
+}
+/* ckeditor5-image/theme/imagestyle.css */
+:host ::ng-deep .image-style-align-left {
+    float: left;
+    margin-right: var(--ck-image-style-spacing);
+}
+/* ckeditor5-image/theme/imagestyle.css */
+:host ::ng-deep .image-style-align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ckeditor5-image/theme/imagestyle.css */
+:host ::ng-deep .image-style-align-right {
+    float: right;
+    margin-left: var(--ck-image-style-spacing);
+}
+/* ckeditor5-image/theme/image.css */
+:host ::ng-deep .image {
+    display: table;
+    clear: both;
+    text-align: center;
+    margin: 1em auto;
+}
+/* ckeditor5-image/theme/image.css */
+:host ::ng-deep .image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 50px;
+}
+/* ckeditor5-image/theme/imagecaption.css */
+:host ::ng-deep .image > figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    word-break: break-word;
+    color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 97%);
+    padding: .6em;
+    font-size: .75em;
+    outline-offset: -1px;
+} 

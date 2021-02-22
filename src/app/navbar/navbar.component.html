@@ -1,0 +1,28 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark  elegant-color-dark" [containerInside]="false">
+    <mdb-navbar-brand><a class="navbar-brand" href="#"><h4> My Blog   </h4> </a></mdb-navbar-brand> 
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link waves-light" routerLink="/home" mdbWavesEffect><h6>Home  </h6><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" routerLink="/addpost" mdbWavesEffect><h6>New Post </h6></a>
+            </li>
+        </ul>
+    </links>
+    <links>
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline waves-light" mdbWavesEffect>
+          <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          </div>
+      </form>
+        <li class="nav-item active">
+          <a class="nav-link waves-light"  mdbWavesEffect><mdb-icon fas icon="sign-in-alt"></mdb-icon> Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light"  mdbWavesEffect><mdb-icon fas icon="sign-out-alt"></mdb-icon> Logout </a>
+        </li>
+      </ul>
+      </links>
+</mdb-navbar>

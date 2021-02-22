@@ -1,0 +1,28 @@
+
+<form class="form-horizontal"   style="margin: 10%;" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="control-label " for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter Title" [(ngModel)] ="post.title" name="title">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="customFile">Main Image</label>
+      <input type="file" class="form-control" id="customFile" (change)="OnFileSelected($event)" />
+     </div> 
+     <div class="form-group">
+      <img [src]="post.imageLink" class="img-fluid" >
+     </div>      
+    <div class="form-group">
+        <label class="control-label " for="title">Statement</label>
+        <ckeditor [editor]="Editor" [config]="config" id="statement" [(ngModel)] ="post.statement" name="statement" > </ckeditor>
+    </div>    
+     <div class="form-group">
+      <div class="col-sm-offset-2 ">
+        <button mdbBtn type="button" color="success" rounded="true" mdbWavesEffect type="submit">Save Post</button>
+      </div>
+    </div>
+</form>
+<div innerHTML={{post.statement}}> </div>
+<p>{{post.statement}}</p>
+
+
+  

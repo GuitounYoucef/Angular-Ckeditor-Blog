@@ -1,0 +1,56 @@
+
+  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" style="margin-top: 50px; margin-left: 10%; margin-right: 10%;">
+    <mdb-carousel-item *ngFor="let post of posts">
+      <a (click)="getPostById(post.id)" target="_blank">
+      <div class="view w-100">
+        <img class="d-block w-100" [src]="post.imageLink" [alt]="post.title" style="height: 700px;">
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h1 class="h3-responsive">{{post.title}}</h1>
+      </div>
+     </a>
+    </mdb-carousel-item>
+    </mdb-carousel>
+
+  <div class="card-group ">
+     <!-- for loop -->
+    <div class="col-md-4  my-5 align-items-start  "  *ngFor="let post of posts">
+      <!--Card-->
+      <mdb-card dark="true" >
+          <!--Card image-->
+          <div class="view overlay waves-light" mdbWavesEffect>
+           <mdb-card-img [src]="post.imageLink" ></mdb-card-img>
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+        <!--/.Card image-->
+      <!--Card content-->
+        <mdb-card-body class="elegant-color white-text">
+          <!--Title-->
+          <mdb-card-title>
+            <h4>{{post.title}}</h4>
+          </mdb-card-title>
+            <hr class="hr-light">
+            <!--Text-->
+            <mdb-card-text class="white-text ">
+            <div id="parg" [innerHTML]="post.statement" style="height: 105px; overflow: hidden;"></div>
+          </mdb-card-text>
+            <a (click)="getPostById(post.id)"  class="white-text d-flex justify-content-end">
+            <h5 class="waves-light white-text" mdbWavesEffect>Read more
+              <span>
+                <mdb-icon fas icon="chevron-right" class="pl-2 waves-light" mdbWavesEffect></mdb-icon>
+              </span>
+            </h5>
+          </a>
+        </mdb-card-body>
+        <!--/.Card content-->
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+    <!-- end for loop -->
+  </div>    
