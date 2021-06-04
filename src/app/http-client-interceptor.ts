@@ -15,7 +15,7 @@ export class HttpClientInterceptor implements HttpInterceptor {
     const token = this.$localStorage.retrieve("authenticationToken");
     console.log('jwt token ' + token);
     if (token) {
-      const cloned = req.clone({
+      const cloned = req.clone({ 
         headers: req.headers.set("Authorization",
           "Bearer " + token)
       });
