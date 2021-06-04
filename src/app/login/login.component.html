@@ -1,0 +1,23 @@
+<div class="main-bg bod">
+    <div class="login-container text-c animated flipInX">
+            <div>
+                <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
+            </div>
+                <h3 class="text-whitesmoke">Login</h3>
+
+            <div class="container-content">
+                <form class="margin-t" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username" required="" [(ngModel)] ="user.username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="*****" required="" [(ngModel)] ="user.password" name="password">
+                    </div>
+                    <button type="submit" class="form-button button-l margin-b" style="height: 40px;">Login</button>
+    
+ 
+                </form>
+
+            </div>
+        </div>
+</div>
